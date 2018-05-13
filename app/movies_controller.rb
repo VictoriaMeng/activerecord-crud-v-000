@@ -27,8 +27,8 @@ def can_be_created_in_a_block(args = nil)
     Movie.create(args)
   else
     movie = Movie.create do |m|
-      m.name = "Home Alone"
-      m.year = "1990"
+      m.string = :name, "Home Alone"
+      m.integer = :year, "1990"
     end
   end
 
